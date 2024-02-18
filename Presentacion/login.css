@@ -1,0 +1,447 @@
+/*CONFIGURACION INICIAL*/
+
+* {
+    text-decoration: none;
+    margin: 0rem;
+    padding: 0rem;
+    font-style: none;
+    list-style: none;
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Raleway";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:rgb(247, 248, 248);
+}
+
+/* GLOBALES */
+
+
+/* UTILIDADES */
+
+.sombra {
+    text-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+
+.flex-row {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-centrar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alinear-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.no-seleccionar {
+    user-select: none;
+}
+
+.display-none {
+    display: none;
+}
+
+
+
+/* FIN UTILIDAD */
+
+
+.contenedor {
+    max-width: 160rem;
+    /** esto es equivalente a 1300px **/
+    margin: 0 auto 0 auto;
+    /*MARGIN AUTO EN LOS COSTADOS CENTRA EL CONTENEDOR*/
+}
+
+.logo{
+    max-width: 25%;
+    height: auto;
+    min-width: 4vw;
+    min-height: auto;
+}
+
+header{
+    background: #212529;
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+}
+header img{
+    max-width: 11rem;
+    max-height: 11rem;
+}
+header h2, h1{
+    color: white;
+    font-family: Mulish;
+    text-shadow: 0.3rem 0.2rem 1rem rgba(255, 255, 255, 0.863);
+}
+
+.mostrar {
+    display: none;
+}
+.title-2{
+
+}
+
+.container-header{
+
+}
+
+.contenedor-botones{
+    height: 100%;
+}
+
+.contenedor-botones a {
+    color: #ccc;
+    list-style: none;
+    text-decoration: none;
+    font-family: Mulish;
+    margin: 1rem;
+    height: 100%;
+    padding: 1rem;
+    transition: color 0.5s, text-shadow 0.5s; /* Transición en la regla base */
+    font-size: 1.8rem;
+}
+
+.contenedor-botones a:hover {
+    text-shadow: 0.3rem 0.3rem 2rem white;
+    color: #ffffff;
+}
+
+.contenedor-botones a:not(:hover) {
+    color: #ccc;
+    text-shadow: none;
+}
+
+
+
+/* .pos-logo{
+  
+    display: flex;
+    justify-content: center;
+    background: url("../Presentacion/img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 10vw;
+    max-width: 40vw;
+    height: 5rem;
+} */
+@media screen and (max-width: 500px) {
+
+
+    header{
+        min-height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+
+    .pos-logo{
+        min-width: 13vw;
+    }
+}
+@media screen and (max-width: 1100px) {
+
+
+    .pos-logo{
+        min-width: 15vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .pos-logo{
+        min-width: 25vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+
+    .pos-logo{
+        min-width: 35vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+
+    .pos-logo{
+        min-width: 45vw;
+    }
+}
+
+
+
+
+
+footer{
+    text-align: center;
+    box-shadow: 0.3rem 0.2rem 1rem rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+small{
+    font-family: Mulish;
+}
+
+
+/* LOGIN */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    width: 40rem;
+    height: 80%;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0.9;
+    margin: 10rem 1rem;
+    
+}
+
+.login-container h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-family: Mulish;
+    margin-bottom: 2rem;
+}
+
+.login-container .a {
+    width: 100%;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    background-color: #f8f8f8;
+    transition: 0.3s;
+    color: #010407;
+    font-family: Mulish;
+    margin-bottom: 2rem;
+}
+
+.login-container input:focus {
+    border-color: #3498db;
+    outline: none;
+    background-color: #e0e0e0;
+    color: #010407;
+    font-family: Mulish;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: 0.3s;
+    font-family: Mulish;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.container-login p{
+    font-family: Mulish;
+    margin-bottom: 2rem;
+}
+
+.login-container button:hover {
+    background-color: #2980b9;
+}
+
+.register-container{ 
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #2ecc71 !important;
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: 0.3s;
+    font-family: Mulish;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.register-container:hover{
+    background-color: #27ae60 !important;
+}
+.forgot-password {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #3498db;
+    cursor: pointer;
+    transition: color 0.3s;
+    width: fit-content;
+    font-family: Mulish;
+    align-self: center;
+}
+
+.forgot-password:hover {
+    color: #b95e29;
+    text-decoration: underline;
+}
+
+
+
+.fuente{
+    font-family: Mulish;
+    align-self: self-start;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    
+}
+
+.check{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: row;
+
+}
+
+/* .mostrar{
+    align-self: flex-end;
+    display: inline-block;
+    justify-self: center;
+} */
+#mostrar-contrasenia{
+    display: flex;
+    justify-self: end;
+    align-self: center;
+    min-width: 1.7rem;
+    min-height: 1.7rem;
+    margin-bottom: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+.validador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.alert {
+    z-index: 9999; /* Asegura que la alerta esté por encima de otros elementos */
+}
+
+
+/* ... (otros estilos) ... */
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content{
+    font-family: Mulish;
+}
