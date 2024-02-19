@@ -54,8 +54,58 @@ include("Negocio/get-iniciales.php");
     <main>
 
 
+        <div class="contenedor-lienzo">
 
-        <h2>pagina principal</h2>
+            <div class="contenedor-backlog">
+                <div class="titulo-backlog">
+                    <h3>Backlog</h3>
+                </div>
+                <div class="cuerpo-backlog">
+                    <div class="contenedor-tarea">
+                        <div class="titulo-perfil">
+                            <h4>Titulo tarea</h4>
+                            <div class="perfil">
+                                <p><?php echo $nombre_may . " " . $apellido_may ?></p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="contenedor-descripcion">
+                            <p>lorem</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-pendiente">
+                <div class="titulo-pendiente">
+                    <h3>Pendiente</h3>
+                </div>
+                <div class="cuerpo-pendiente">
+                    <p>texto pendiente</p>
+                </div>
+            </div>
+
+            <div class="contenedor-haciendo">
+                <div class="titulo-haciendo">
+                    <h3>Haciendo</h3>
+                </div>
+                <div class="cuerpo-haciendo">
+                    <p>texto haciendo</p>
+                </div>
+            </div>
+
+            <div class="contenedor-hecho">
+                <div class="titulo-hecho">
+                    <h3>Hecho</h3>
+                </div>
+                <div class="cuerpo-hecho">
+                    <p>Texto hecho</p>
+                </div>
+            </div>
+
+        </div>
 
     </main>
 
