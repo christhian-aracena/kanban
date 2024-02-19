@@ -31,10 +31,8 @@ include("Negocio/get-iniciales.php");
 
     <div class="sup">
         <header id="banner">
-
-            <a class="kanb" href="main.php">
-                <h1>Kanban</h1>
-            </a>
+            
+            <a href="main.php"><h1>Kanban</h1></a>
 
             <div class="contenedor-botones">
                 <a href="started.php">Comenzar</a>

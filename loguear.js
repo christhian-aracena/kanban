@@ -30,14 +30,14 @@ $(document).ready(function () {
 
 function showAlert(message) {
   var alertDiv = $(
-    '<div class="alert alert-danger alert-dismissible mt-3" role="alert" style="position: fixed; top: -100px; left: 50%; transform: translateX(-50%); transition: top 0.5s ease-in-out;">' +
+    '<div class="alert alert-danger alert-dismissible mt-3" role="alert" style="position: fixed; font-family: Mulish; top: -100px; left: 50%; transform: translateX(-50%); transition: top 0.5s ease-in-out;">' +
       message +
       '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
       "</div>"
   );
   $("body").append(alertDiv);
   setTimeout(function () {
-    alertDiv.css("top", "10px");
+    alertDiv.css("top", "-0.9rem");
   }, 100);
   setTimeout(function () {
     alertDiv.css("top", "-100px");
@@ -46,13 +46,13 @@ function showAlert(message) {
 
 function showSuccess(message) {
   var successDiv = $(
-    '<div id="success-alert" class="alert alert-success mt-3" style="position: fixed; top: -100px; left: 50%; transform: translateX(-50%); transition: top 0.5s ease-in-out;">' +
+    '<div id="success-alert" class="alert alert-success mt-3" style="font-family: Mulish; position: fixed; top: -100px; left: 50%; transform: translateX(-50%); transition: top 0.5s ease-in-out;">' +
       message +
       "</div>"
   );
   $("body").append(successDiv);
   setTimeout(function () {
-    successDiv.css("top", "10px");
+    successDiv.css("top", "-0.9rem");
   }, 100);
   setTimeout(function () {
     successDiv.css("top", "-100px");

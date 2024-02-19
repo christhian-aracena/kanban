@@ -31,13 +31,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color:rgb(247, 248, 248);
+    background-color: rgb(247, 248, 248);
+}
 
-}
-.kanban span{
-    font-family: Rock Salt;
-    
-}
 /* GLOBALES */
 
 
@@ -101,15 +97,17 @@ body {
     /*MARGIN AUTO EN LOS COSTADOS CENTRA EL CONTENEDOR*/
 }
 
-.logo{
+.logo {
     max-width: 25%;
     height: auto;
     min-width: 4vw;
     min-height: auto;
 }
 
-header{
+header {
     background: #212529;
+    /* Gris oscuro a negro */
+
     min-height: 7vh;
     display: flex;
     align-items: center;
@@ -117,32 +115,60 @@ header{
     position: fixed;
     top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 10;
+
 }
-header img{
+
+header img {
     max-width: 11rem;
     max-height: 11rem;
 }
-header h2, h1{
+
+header h2,
+h1 {
     color: white;
-    font-family: Mulish;
+    font-family: Rock Salt;
     text-shadow: 0.3rem 0.2rem 1rem rgba(255, 255, 255, 0.863);
 }
 
 .mostrar {
     display: none;
 }
-.login{
-    font-family: Rock Salt;
+
+.perfil p {
+    color: rgb(255, 255, 255);
+    display: contents;
+    font-family: Mulish;
+    font-weight: bold;
 }
 
-.container-header{
+header h1 {
+    margin: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.perfil {
+    display: flex !important;
+    background: #4f504fbd;
+    min-width: 4rem;
+    min-height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: solid 0.1rem rgba(105, 204, 85, 0.678);
 
 }
 
-.contenedor-botones{
+
+.contenedor-botones {
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+    margin-right: 3rem;
 }
 
 .contenedor-botones a {
@@ -153,8 +179,17 @@ header h2, h1{
     margin: 1rem;
     height: 100%;
     padding: 1rem;
-    transition: color 0.5s, text-shadow 0.5s; /* Transición en la regla base */
+    transition: color 0.5s, text-shadow 0.5s;
+    /* Transición en la regla base */
     font-size: 1.8rem;
+}
+
+.kanb h1,
+a {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    text-decoration: none;
 }
 
 .contenedor-botones a:hover {
@@ -167,6 +202,11 @@ header h2, h1{
     text-shadow: none;
 }
 
+#banner h1 {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+}
 
 
 /* .pos-logo{
@@ -181,10 +221,10 @@ header h2, h1{
     max-width: 40vw;
     height: 5rem;
 } */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
 
-    header{
+    header {
         min-height: 10vh;
         display: flex;
         justify-content: center;
@@ -197,14 +237,15 @@ header h2, h1{
 @media screen and (max-width: 1300px) {
 
 
-    .pos-logo{
+    .pos-logo {
         min-width: 13vw;
     }
 }
+
 @media screen and (max-width: 1100px) {
 
 
-    .pos-logo{
+    .pos-logo {
         min-width: 15vw;
     }
 }
@@ -212,7 +253,7 @@ header h2, h1{
 @media screen and (max-width: 800px) {
 
 
-    .pos-logo{
+    .pos-logo {
         min-width: 25vw;
     }
 }
@@ -220,7 +261,7 @@ header h2, h1{
 @media screen and (max-width: 650px) {
 
 
-    .pos-logo{
+    .pos-logo {
         min-width: 35vw;
     }
 }
@@ -228,7 +269,7 @@ header h2, h1{
 @media screen and (max-width: 400px) {
 
 
-    .pos-logo{
+    .pos-logo {
         min-width: 45vw;
     }
 }
@@ -237,7 +278,7 @@ header h2, h1{
 
 
 
-footer{
+footer {
     text-align: center;
     box-shadow: 0.3rem 0.2rem 1rem rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -245,9 +286,30 @@ footer{
     width: 100%;
     background: #fff;
 }
-small{
+
+small {
     font-family: Mulish;
 }
+
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+}
+
+.fuente {
+    font-family: Mulish;
+    align-self: self-start;
+}
+
+
+
+
 
 
 /* LOGIN */
@@ -266,7 +328,7 @@ small{
     overflow: hidden;
     opacity: 0.9;
     margin: 10rem 1rem;
-    
+
 }
 
 .login-container h1 {
@@ -290,173 +352,6 @@ small{
     margin-bottom: 2rem;
 }
 
-.login-container input:focus {
-    border-color: #3498db;
-    outline: none;
-    background-color: #e0e0e0;
-    color: #010407;
-    font-family: Mulish;
-}
-
-.login-container button {
-    width: 100%;
-    padding: 1.2rem;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    font-size: 1.6rem;
-    transition: 0.3s;
-    font-family: Mulish;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-}
-.container-login p{
-    font-family: Mulish;
-    margin-bottom: 2rem;
-}
-
-.login-container button:hover {
-    background-color: #2980b9;
-}
-
-.register-container{ 
-    width: 100%;
-    padding: 1.2rem;
-    background-color: #2ecc71 !important;
-    color: #fff;
-    border: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    font-size: 1.6rem;
-    transition: 0.3s;
-    font-family: Mulish;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-}
-.register-container:hover{
-    background-color: #27ae60 !important;
-}
-.forgot-password {
-    margin-top: 1rem;
-    font-size: 1.4rem;
-    color: #3498db;
-    cursor: pointer;
-    transition: color 0.3s;
-    width: fit-content;
-    font-family: Mulish;
-    align-self: center;
-}
-
-.forgot-password:hover {
-    color: #b95e29;
-    text-decoration: underline;
-}
-
-
-
-.fuente{
-    font-family: Mulish;
-    align-self: self-start;
-}
-
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    
-}
-
-.check{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    flex-direction: row;
-
-}
-
-/* .mostrar{
-    align-self: flex-end;
-    display: inline-block;
-    justify-self: center;
-} */
-#mostrar-contrasenia{
-    display: flex;
-    justify-self: end;
-    align-self: center;
-    min-width: 1.7rem;
-    min-height: 1.7rem;
-    margin-bottom: 0.7rem;
-    margin-left: 0.7rem;
-}
-
-.validador{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.alert {
-    z-index: 9999; /* Asegura que la alerta esté por encima de otros elementos */
-}
-
-
-/* ... (otros estilos) ... */
-
-/* Estilos del modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 80%;
-    text-align: center;
-}
-
-.close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #333;
-}
-
-.modal-content p {
-    margin-bottom: 20px;
-}
-
-.modal-content p:last-child {
-    margin-bottom: 0;
-}
-
-.modal-content {
-    font-family: 'Mulish', sans-serif; /* Ajuste el nombre de la fuente según sea necesario */
+.logo {
+    max-width: 0.5rem !important;
 }

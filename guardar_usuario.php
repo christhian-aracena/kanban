@@ -30,10 +30,11 @@ function generarPalabraAleatoria() {
 }
 
 $id_usuario = $nombre . '-'.$apellido . '-'.generarPalabraAleatoria();
+$id_user_format = strtolower($id_usuario);
 
 
 
-$query = "INSERT INTO usuarios (id_usuario, nombre, apellido, correo, contrasena) VALUES ('$id_usuario', '$nombre', '$apellido', '$correo', '$password')";
+$query = "INSERT INTO usuarios (id_usuario, nombre, apellido, correo, contrasena) VALUES ('$id_user_format', '$nombre', '$apellido', '$correo', '$password')";
 
 if(mysqli_query($conexion, $query)) {
     echo 'success';

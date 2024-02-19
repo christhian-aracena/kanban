@@ -12,11 +12,14 @@ $array = mysqli_fetch_array($consulta);
 if ($array['count'] > 0) {
     $_SESSION['email'] = $correo;
 
-    $resultados = mysqli_query($conexion, "SELECT id_usuario, nombre FROM usuarios WHERE correo = '$correo'");
+    $resultados = mysqli_query($conexion, "SELECT id_usuario, nombre, apellido FROM usuarios WHERE correo = '$correo'");
 
     if ($consulta = mysqli_fetch_array($resultados)) {
         $_SESSION['id_app'] = $consulta['id_usuario'];
+        $apellido = $consulta['apellido'];
+        $_SESSION['apellido'] = $apellido;
         $nombre = $consulta['nombre'];
+        $_SESSION['nombre'] = $nombre;
     }
 
     // Determinar el saludo según la hora actual de Santiago de Chile
