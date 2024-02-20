@@ -56,8 +56,8 @@ include("Negocio/get-iniciales.php");
 
         <div class="contenedor-create">
             <div class="botones-create">
-                <a class="btn-individual" href="#">Crear proyecto individual</a>
-                <a class="btn-grupal" href="#" onmouseover="mostrarImagenHover()" onmouseout="ocultarImagenHover()">Crear proyecto Grupal</a>
+                <a class="btn-individual" href="#">Proyecto individual</a>
+                <a class="btn-grupal" href="#" onmouseover="mostrarImagenHover()" onmouseout="ocultarImagenHover()">Proyecto grupal</a>
             </div>
             <div class="imagenes-create">
                 <img src="Presentacion/img/kanban method-bro.png" alt="Imagen 1" class="imagen-normal">
