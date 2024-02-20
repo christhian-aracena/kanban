@@ -63,8 +63,11 @@ include("Negocio/get-iniciales.php");
                 <img src="Presentacion/img/kanban method-bro.png" alt="Imagen 1" class="imagen-normal">
                 <img src="Presentacion/img/kanban method-bro2.png" alt="Imagen 2" class="imagen-hover">
             </div>
-
+            <div class="siguiente">
+                <a href="">Siguiente <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
         </div>
+
     </main>
 
 
