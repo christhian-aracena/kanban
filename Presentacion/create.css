@@ -1,0 +1,408 @@
+/*CONFIGURACION INICIAL*/
+
+* {
+    text-decoration: none;
+    margin: 0rem;
+    padding: 0rem;
+    font-style: none;
+    list-style: none;
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Raleway";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(247, 248, 248);
+}
+
+/* GLOBALES */
+
+
+/* UTILIDADES */
+
+.sombra {
+    text-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+
+.flex-row {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-centrar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alinear-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.no-seleccionar {
+    user-select: none;
+}
+
+.display-none {
+    display: none;
+}
+
+
+
+/* FIN UTILIDAD */
+
+
+.contenedor {
+    max-width: 160rem;
+    /** esto es equivalente a 1300px **/
+    margin: 0 auto 0 auto;
+    /*MARGIN AUTO EN LOS COSTADOS CENTRA EL CONTENEDOR*/
+}
+
+.logo {
+    max-width: 25%;
+    height: auto;
+    min-width: 4vw;
+    min-height: auto;
+}
+
+header {
+    background: #212529;
+    /* Gris oscuro a negro */
+
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+
+}
+
+header img {
+    max-width: 11rem;
+    max-height: 11rem;
+}
+
+header h2,
+h1 {
+    color: white;
+    font-family: Rock Salt;
+    text-shadow: 0.3rem 0.2rem 1rem rgba(255, 255, 255, 0.863);
+}
+
+.mostrar {
+    display: none;
+}
+
+.perfil p {
+    color: rgb(255, 255, 255);
+    display: contents;
+    font-family: Mulish;
+    font-weight: bold;
+}
+
+header h1 {
+    margin: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.perfil {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+    background: #4f504fbd;
+    min-width: 4rem;
+    min-height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: solid 0.1rem rgba(105, 204, 85, 0.678);
+}
+
+
+.contenedor-botones {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+    margin-right: 3rem;
+}
+
+.contenedor-botones a {
+    color: #ccc;
+    list-style: none;
+    text-decoration: none;
+    font-family: Mulish;
+    margin: 1rem;
+    height: 100%;
+    padding: 1rem;
+    transition: color 0.5s, text-shadow 0.5s;
+    /* Transición en la regla base */
+    font-size: 1.8rem;
+}
+
+.kanb h1,
+a {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+.contenedor-botones a:hover {
+    text-shadow: 0.3rem 0.3rem 2rem white;
+    color: #ffffff;
+}
+
+.contenedor-botones a:not(:hover) {
+    color: #ccc;
+    text-shadow: none;
+}
+
+#banner h1 {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+}
+
+
+/* .pos-logo{
+  
+    display: flex;
+    justify-content: center;
+    background: url("../Presentacion/img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 10vw;
+    max-width: 40vw;
+    height: 5rem;
+} */
+@media screen and (max-width: 600px) {
+
+
+    header {
+        min-height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedor-lienzo {
+        margin-top: 0vh !important;
+        max-height: 60vh !important;
+        min-height: 60vh !important;
+
+    }
+
+
+}
+
+@media screen and (max-width: 1300px) {
+
+
+    .pos-logo {
+        min-width: 18vw;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+
+    .pos-logo {
+        min-width: 15vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .pos-logo {
+        min-width: 25vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+
+    .pos-logo {
+        min-width: 35vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+
+    .pos-logo {
+        min-width: 45vw;
+    }
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    box-shadow: 0.3rem 0.2rem 1rem rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+small {
+    font-family: Mulish;
+}
+
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    scroll-behavior: smooth;
+
+}
+
+.fuente {
+    font-family: Mulish;
+    align-self: self-start;
+}
+
+
+
+.contenedor-create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones-create {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+.contenedor-create img {
+    width: 40rem;
+}
+
+.btn-individual {
+    font-family: Mulish;
+    background: rgb(30, 204, 210);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    width: 25rem;
+    text-align: center;
+}
+
+.btn-grupal {
+    font-family: Mulish;
+    background: rgb(135, 87, 175);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    text-align: center;
+    width: 25rem;
+}
+
+.btn-individual:hover {
+    background: rgb(30, 172, 177);
+    color: white;
+    transition: color red 1s;
+}
+
+.btn-grupal:hover {
+    background: rgb(93, 53, 126);
+    color: white;
+}
+
+.contenedor-create {
+    margin-top: 15rem;
+}
+
+
+
+.contenedor-create {
+    position: relative;
+    /* width: 300px; 
+    height: 200px;  */
+}
+
+.imagenes-create {
+    position: relative;
+}
+
+.imagen-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.botones-create .btn-grupal:hover~.imagenes-create .imagen-hover {
+    opacity: 1;
+}
+
+
+
+
+.title-tipo {
+    margin-bottom: -10rem;
+    font-family: Mulish;
+}
