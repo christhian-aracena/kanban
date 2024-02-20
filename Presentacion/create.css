@@ -168,8 +168,8 @@ header h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin: 0rem 1rem;
+    margin-right: 3rem;
 }
 
 .contenedor-botones a {
@@ -233,7 +233,8 @@ a {
         flex-direction: column;
         text-align: center;
     }
-    .contenedor-lienzo{
+
+    .contenedor-lienzo {
         margin-top: 0vh !important;
         max-height: 60vh !important;
         min-height: 60vh !important;
@@ -319,243 +320,104 @@ main {
 
 
 
-
-
-
-/* LOGIN */
-.login-container {
+.contenedor-create {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: stretch;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 0.8rem;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+}
+
+.botones-create {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contenedor-create img {
     width: 40rem;
-    height: 80%;
-    text-align: center;
-    overflow: hidden;
-    opacity: 0.9;
-    margin: 10rem 1rem;
-
 }
 
-.login-container h1 {
-    color: #333;
-    margin-bottom: 2rem;
+.btn-individual {
     font-family: Mulish;
-    margin-bottom: 2rem;
-}
-
-.login-container .a {
-    width: 100%;
-    padding: 1.2rem;
-    margin: 1rem 0;
-    box-sizing: border-box;
-    border: 0.1rem solid #ccc;
-    border-radius: 0.4rem;
-    background-color: #f8f8f8;
-    transition: 0.3s;
-    color: #010407;
-    font-family: Mulish;
-    margin-bottom: 2rem;
-}
-
-.logo {
-    max-width: 0.5rem !important;
-}
-
-
-
-
-
-
-/* AQUI EMPIEZA EL LIENZO KANBAN */
-
-
-.contenedor-lienzo{
-    min-width: 90vw;
-    max-width: 90vw;
-    max-height: 80vh;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: row;
-    margin-top: 13vh;
-    gap: 1rem;
-
-}
-
-.contenedor-backlog{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    
-}
-
-.titulo-backlog{
-    background: #585450;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    width: 100%;
-    height: 3rem;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 10px 20px rgb(255, 255, 255);
-    color: white;
-    font-family: Mulish;
-}
-
-.cuerpo-backlog{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #807d79;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    width: 100%;
-    min-height: 70vh;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-
-}
-
-
-.contenedor-pendiente{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.titulo-pendiente{
-    background: #FEB000;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    width: 100%;
-    height: 3rem;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 10px 20px rgb(0, 0, 0);
-    color: white;
-    font-family: Mulish;
-}
-
-.cuerpo-pendiente{
-    background: #FFFBE8;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    width: 100%;
-    height: 100%;
-    min-height: 70vh;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-}
-
-.contenedor-haciendo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-.titulo-haciendo{
-    background: #33A1F2;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    width: 100%;
-    height: 3rem;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 10px 20px rgb(0, 0, 0);
-    color: white;
-    font-family: Mulish;
-}
-.cuerpo-haciendo{
-    background: #F2FAFF;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    width: 100%;
-    height: 100%;
-    min-height: 70vh;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-}
-
-.contenedor-hecho{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.titulo-hecho{
-    background: #43C466;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    width: 100%;
-    height: 3rem;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 10px 20px rgb(0, 0, 0);
-    color: white;
-    font-family: Mulish;
-}
-
-.cuerpo-hecho{
-    background: #EFFCEF;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    width: 100%;
-    height: 100%;
-    min-height: 70vh;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-}
-
-/* TARJETA DE TAREAS */
-
-.contenedor-tarea{
-    background: white;
-    width: 92%;
-    height: 10rem;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    background: rgb(30, 204, 210);
+    padding: 1rem;
     border-radius: 1rem;
+    color: white;
+    width: 18rem;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
-.titulo-perfil{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    margin-left: 1rem;
-    gap: 1rem;
+.btn-grupal {
+    font-family: Mulish;
+    background: rgb(135, 87, 175);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    text-align: center;
+    width: 18rem;
+    transition: background-color 0.3s;
 }
 
-.titulo-perfil p{
-    margin-left: 1rem;
+.btn-individual:hover {
+    background: rgb(30, 172, 177);
+    color: white;
+}
+
+.btn-grupal:hover {
+    background: rgb(93, 53, 126);
+    color: white;
+}
+
+.contenedor-create {
+    margin-top: 15rem;
+    margin-bottom: -10rem;
+}
+
+
+
+.contenedor-create {
+    position: relative;
+    /* width: 300px; 
+    height: 200px;  */
+}
+
+.imagenes-create {
+    position: relative;
+}
+
+.imagen-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.botones-create .btn-grupal:hover~.imagenes-create .imagen-hover {
+    opacity: 1;
+}
+
+
+
+
+.title-tipo {
+    margin-bottom: -13rem;
+    font-family: Mulish;
+}
+
+.siguiente a{
+    color: white;
+    background: rgb(72, 170, 26);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-family: Mulish;
+    transition: background-color 0.3s;
+}
+
+.siguiente a:hover{
+    background: rgb(53, 122, 21);
 }
