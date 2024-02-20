@@ -37,6 +37,7 @@ include("Negocio/get-iniciales.php");
             </a>
 
             <div class="contenedor-botones">
+                <a href="Dashboard">Dashboard</a>
                 <a href="create.php">Comenzar</a>
                 <a href="#">Mis proyectos</a>
                 <div class="perfil contenedor-botones">
@@ -58,7 +59,7 @@ include("Negocio/get-iniciales.php");
 
             <div class="contenedor-backlog">
                 <div class="titulo-backlog">
-                    <h3>Backlog</h3>
+                    <h3>Backlog <i class="fa-solid fa-layer-group"></i></h3>
                 </div>
                 <div class="cuerpo-backlog">
                     <div class="contenedor-tarea">
@@ -80,7 +81,7 @@ include("Negocio/get-iniciales.php");
 
             <div class="contenedor-pendiente">
                 <div class="titulo-pendiente">
-                    <h3>Pendiente</h3>
+                    <h3>Pendiente <i class="fa-solid fa-arrow-right"></i></h3>
                 </div>
                 <div class="cuerpo-pendiente">
                     <p>texto pendiente</p>
@@ -89,7 +90,7 @@ include("Negocio/get-iniciales.php");
 
             <div class="contenedor-haciendo">
                 <div class="titulo-haciendo">
-                    <h3>Haciendo</h3>
+                    <h3>Haciendo <i class="fa-solid fa-arrow-right"></i></h3>
                 </div>
                 <div class="cuerpo-haciendo">
                     <p>texto haciendo</p>
@@ -98,7 +99,7 @@ include("Negocio/get-iniciales.php");
 
             <div class="contenedor-hecho">
                 <div class="titulo-hecho">
-                    <h3>Hecho</h3>
+                    <h3>Hecho <i class="fa-solid fa-check"></i></h3>
                 </div>
                 <div class="cuerpo-hecho">
                     <p>Texto hecho</p>

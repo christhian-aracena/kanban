@@ -168,8 +168,8 @@ header h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0rem 1rem;
-    margin-right: 3rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .contenedor-botones a {
