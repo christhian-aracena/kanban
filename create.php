@@ -56,15 +56,15 @@ include("Negocio/get-iniciales.php");
 
         <div class="contenedor-create">
             <div class="botones-create">
-                <a class="btn-individual" href="#">Proyecto individual</a>
-                <a class="btn-grupal" href="#" onmouseover="mostrarImagenHover()" onmouseout="ocultarImagenHover()">Proyecto grupal</a>
+                <a class="btn-individual" href="#" id="single">Proyecto individual</a>
+                <a class="btn-grupal" href="#" onmouseover="mostrarImagenHover()" onmouseout="ocultarImagenHover()" id="grupal">Proyecto grupal</a>
             </div>
             <div class="imagenes-create">
                 <img src="Presentacion/img/kanban method-bro.png" alt="Imagen 1" class="imagen-normal">
                 <img src="Presentacion/img/kanban method-bro2.png" alt="Imagen 2" class="imagen-hover">
             </div>
-            <div class="siguiente">
-                <a href="">Siguiente <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="siguiente" id="siguiente">
+            <a href="">Comenzar proyecto individual <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
@@ -84,7 +84,7 @@ include("Negocio/get-iniciales.php");
 
 
 
-
+    <script src="ajax-siguiente.js"></script>
 </body>
 
 </html>
