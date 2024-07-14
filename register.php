@@ -2,11 +2,11 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Crear cuenta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="Presentacion/login.css">
+    <link rel="stylesheet" href="Presentacion/register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -16,13 +16,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.all.min.js
+"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.min.css
+" rel="stylesheet">
+
 </head>
 
 <body>
 
     <div class="sup">
         <header>
-        <h1 class="no-seleccionar kanban">Sistema <span>Kanban</span></h1>
+            <h1 class="no-seleccionar kanban">Sistema <span>Kanban</span></h1>
 
             <div class="contenedor-botones">
                 <a href="login.php">Iniciar sesión</a>
@@ -47,6 +54,10 @@
                     <input class="a" type="email" id="correo" name="correo" placeholder="Ej: jperez@soex.cl" required>
                 </div>
                 <div class="form-group">
+                    <label class="fuente" for="gender">Genero:</label>
+                    <?php include('Negocio/get-combox-gender.php') ?>
+                </div>
+                <div class="form-group">
                     <label class="fuente" for="password">Contraseña:</label>
                     <input class="a" type="password" id="password" name="password" placeholder="*******" required>
                 </div>
@@ -55,7 +66,7 @@
                     <input class="a" type="password" id="repetir" name="repetir" placeholder="*******" required>
                 </div>
                 <div class="check">
-                    <label class="fuente" for="mostrar-contrasenia">Mostrar contraseñas</label>
+                    <label class="checkText" for="mostrar-contrasenia">Mostrar contraseñas</label>
                     <input type="checkbox" id="mostrar-contrasenia" onclick="mostrarContrasenia()">
                 </div>
                 <button type="submit" class="register-container" id="btnregister">Crear cuenta</button>
@@ -80,6 +91,7 @@
 
     <script src="registrar.js"></script>
     <script src="Negocio/js/validaciones.js"></script>
+
 </body>
 
 </html>

@@ -186,6 +186,12 @@ h1 {
     max-width: 40vw;
     height: 5rem;
 } */
+@media screen and (max-height: 820px) {
+
+   .login-container{
+    margin-top: 5rem;
+   }
+}
 @media screen and (max-width: 500px) {
 
 
@@ -208,8 +214,15 @@ h1 {
 }
 
 @media screen and (max-width: 1100px) {
+    .login-container {
+        min-width: 90%;
 
+    }
+    .login-container .a {
+        margin: 0 !important;
+        margin-bottom: 0;
 
+    }
     .pos-logo {
         min-width: 15vw;
     }
@@ -217,9 +230,6 @@ h1 {
 
 @media screen and (max-width: 800px) {
 
-    main {
-        width: 100%;
-    }
 
     .pos-logo {
         min-width: 25vw;
@@ -228,6 +238,10 @@ h1 {
 
 @media screen and (max-width: 650px) {
 
+
+    .login-container{
+        height: 100%;
+    }
 
     .pos-logo {
         min-width: 35vw;
@@ -270,12 +284,10 @@ small {
     padding: 2rem;
     border-radius: 0.8rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-    width: 40rem;
+    width: 40%;
     height: 80%;
     text-align: center;
     overflow: hidden;
-    /* opacity: 0.9; */
-    margin: 10rem 1rem;
 
 }
 
@@ -289,7 +301,7 @@ small {
 .login-container .a {
     width: 100%;
     padding: 1.2rem;
-    margin: 1rem 0;
+    margin: 0;
     box-sizing: border-box;
     border: 0.1rem solid #ccc;
     border-radius: 0.4rem;
@@ -297,7 +309,7 @@ small {
     transition: 0.3s;
     color: #010407;
     font-family: Mulish;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .login-container input:focus {
@@ -371,14 +383,22 @@ small {
 
 .fuente {
     font-family: Mulish;
+    display: flex;
+    justify-self: self-start;
     align-self: self-start;
+}
+
+.checkText {
+    font-family: Mulish;
+    display: flex;
+    
 }
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 4rem;
     position: absolute;
     top: 50%;
@@ -386,12 +406,14 @@ main {
     transform: translate(-50%, -50%);
     min-height: 100%;
     min-width: 100%;
-
+    overflow: scroll;
+    padding-top: 18rem;
+    padding-bottom: 13rem;
 }
 
 .check {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: end;
     flex-direction: row;
 
@@ -408,8 +430,8 @@ main {
     align-self: center;
     min-width: 1.7rem;
     min-height: 1.7rem;
-    margin-bottom: 0.7rem;
     margin-left: 0.7rem;
+    
 }
 
 .validador {
@@ -478,6 +500,56 @@ main {
 }
 
 .modal-content {
-    font-family: 'Mulish', sans-serif;
+    font-family: Mulish;
     /* Ajuste el nombre de la fuente según sea necesario */
 }
+
+/* Clase para el título de la alerta */
+.swal2-title {
+    font-family: Mulish;
+    font-size: 2.4rem;
+    
+  }
+  
+  /* Clase para el texto de la alerta */
+  .swal2-text {
+    font-family: Mulish;
+    font-size: 1.8rem;
+
+  }
+
+  .swal2-footer {
+    text-decoration: none;
+    font-family: Mulish;
+    font-size: 1.4rem;
+    color: #3498db;
+    transition: color ease-in-out 3s;
+  }
+
+  .swal2-footer:hover{
+    color: #27ae60;
+    transition: color 2s;
+
+  }
+  div:where(.swal2-container) .swal2-html-container{
+    font-size: 2rem !important;
+    font-family: Mulish;
+  }
+
+  .my-confirm-button{
+    background: dodgerblue;
+    color: white;
+    font-family: Mulish;
+    padding: 0.2rem 1.2rem;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(252, 8, 8, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 3rem;
+    border-radius: 0.5rem;
+  }
+
+  .my-confirm-button:hover{
+    transition: 0.5s;
+    background: #27ae60;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  }

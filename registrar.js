@@ -1,49 +1,80 @@
-$(document).ready(function(){
-    // Mostrar el modal dinámico
-    function mostrarModal(mensaje) {
-        $('#modal-message').text(mensaje);
-        $('#custom-modal').fadeIn();
+$(document).ready(function() {
+  $('#register-form').submit(function(e) {
+      e.preventDefault();
 
-        // Cerrar el modal al hacer clic fuera de él
-        $(document).on('click', function(e) {
-            if ($(e.target).is('#custom-modal')) {
-                $('#custom-modal').fadeOut();
-            }
-        });
-    }
+      // Validar que las contraseñas coincidan
+      var password = $('#password').val();
+      var repetir = $('#repetir').val();
 
-    // Cerrar el modal al hacer clic en la "x"
-    $('#close-modal').click(function() {
-        $('#custom-modal').fadeOut();
-    });
+      if (password !== repetir) {
+          Swal.fire({
+              icon: "error",
+              title: "Error de contraseñas",
+              text: "Las contraseñas no coinciden!",
+              customClass: {
+                title: 'swal2-title',
+                content: 'swal2-text',
+                footer: 'swal2-footer',
+                confirmButton: 'my-confirm-button'
+              },
+              buttonsStyling: false,
+              confirmButtonText: 'Aceptar'
+          });
+          return;
+      }
 
-    $('#register-form').submit(function(e){
-        e.preventDefault();
-
-        // Validar que las contraseñas coincidan y continuar con la solicitud AJAX
-
-        var password = $('#password').val();
-        var repetir = $('#repetir').val();
-
-        if (password !== repetir) {
-            alert('Las contraseñas no coinciden. Por favor, verifica.');
-            return;
-        }
-
-        var formData = $(this).serialize();
-        $.ajax({
-            type: 'POST',
-            url: 'guardar_usuario.php',
-            data: formData,
-            success: function(response){
-                // Mostrar el mensaje en el modal
-                mostrarModal('¡Registro exitoso! Tu cuenta ha sido creada exitosamente.');
-                // Restaurar el formulario u otras acciones si es necesario
-                $('#register-form')[0].reset();
-            },
-            error: function(){
-                alert('Hubo un error al procesar la solicitud.');
-            }
-        });
-    });
+      // Validar si el correo ya existe
+      var correo = $('#correo').val();
+      $.ajax({
+          type: 'POST',
+          url: 'check_email.php',
+          data: {correo: correo},
+          dataType: 'json',
+          success: function(response) {
+              if (response.exists) {
+                  Swal.fire({
+                      icon: "warning",
+                      title: "Error de cuenta:",
+                      text: "La cuenta que intentas crear ya existe.",
+                      footer: '<a href="#">¿Olvidaste tu contraseña?</a>',
+                      customClass: {
+                        title: 'swal2-title',
+                        content: 'swal2-text',
+                        footer: 'swal2-footer',
+                        confirmButton: 'my-confirm-button'
+                      },
+                      buttonsStyling: false,
+                      confirmButtonText: 'Aceptar'
+                  });
+              } else {
+                  // Si el correo no existe, proceder con el registro
+                  var formData = $('#register-form').serialize();
+                  $.ajax({
+                      type: 'POST',
+                      url: 'guardar_usuario.php',
+                      data: formData,
+                      success: function(response) {
+                          Swal.fire({
+                              icon: "success",
+                              title: "Cuenta creada con éxito",
+                              text: "Ya puedes iniciar sesión!",
+                              customClass: {
+                                title: 'swal2-title',
+                                content: 'swal2-text',
+                                footer: 'swal2-footer',
+                                confirmButton: 'my-confirm-button'
+                              },
+                              buttonsStyling: false,
+                              confirmButtonText: 'Aceptar'
+                          });
+                          $('#register-form')[0].reset();
+                      },
+                      error: function() {
+                          alert('Hubo un error al procesar la solicitud.');
+                      }
+                  });
+              }
+          }
+      });
+  });
 });

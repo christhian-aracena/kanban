@@ -13,7 +13,7 @@ $(document).ready(function () {
           showSuccess(response.message);
           // Redirecciona a main.php después de 3 segundos
           setTimeout(function () {
-            window.location.href = "main.php";
+            window.location.href = "inicio.php";
           }, 2000);
         } else {
           // Si las credenciales son incorrectas, muestra el mensaje de alerta
