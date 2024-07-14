@@ -1,5 +1,5 @@
 <?php
-$nombreServidor = "localhost";
+$nombreServidor = "rescatam_kanban";
 $nombreUsuario = "root"; 
 $contrasenia = "";
 $nombreBD = "kanban";
