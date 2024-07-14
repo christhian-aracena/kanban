@@ -1,6 +1,6 @@
 <?php
 $nombreServidor = "localhost";
-$nombreUsuario = "christhian@localhost"; 
+$nombreUsuario = ""; 
 $contrasenia = "";
 $nombreBD = "rescatam_kanban";
 
